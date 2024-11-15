@@ -82,6 +82,7 @@ if [[ ! -e "$fichier_a_verifier" ]]; then
         echo "Module désamorcé" > ./.module_OK  # Crée un fichier de flag pour arrêter le compteur
         verifier_temps_ecoule
         [ -f "$error_file" ] && rm -f "$error_file"
+        ./reset_module.sh
     else
         echo "FAILED ! Vous avez supprimé d'autres fichiers que celui requis : $fichier_a_verifier."
         echo "Relancez un nouveau module fils."

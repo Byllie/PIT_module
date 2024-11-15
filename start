@@ -264,13 +264,17 @@ elif [[ "$1" == "--level" ]]; then
         nombre_module_hasard 7
         duration=5
         max_errors=0
+    elif [[ "$level_number" == "1234" ]]; then
+        mini_games=("radio")
+        duration=30
+        max_errors=3
     else
         echo "Niveau invalide."
         exit 1
     fi
 else
     # Tous les modules
-    mini_games=("fils" "citations" "alphabet" "morse" "tintin" "cities" "memory")
+    mini_games=("fils" "citations" "alphabet" "morse" "tintin" "cities" "memory"  "radio")
     duration=30
 fi
 
